@@ -30,11 +30,13 @@ namespace NvInterop {
     System::Boolean DestroySession();
     System::Boolean LoadSettings();
     System::Boolean GetGlobalProfile();
+    System::Boolean EnumSettings( array<NvDRS_Setting^>^ drsSettings );
     System::Boolean GetSetting( System::UInt32 settingId, NvDRS_Setting^ drsSetting );
     System::String^ GetErrMsg();
     
 	protected:
     ~NvAPI_Interop();
+    !NvAPI_Interop();
 
 	private:
     bool               m_Init;
